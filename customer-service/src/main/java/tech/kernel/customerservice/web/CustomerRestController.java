@@ -10,7 +10,6 @@ import java.util.List;
 
 @RestController
 public class CustomerRestController {
-
     private CustomerRepository customerRepository;
 
     public CustomerRestController(CustomerRepository customerRepository) {
@@ -27,8 +26,6 @@ public class CustomerRestController {
     public Customer customerById(@PathVariable String id) {
         return customerRepository.findById(Long.parseLong(id)).get();
     }
-
-
 
 
 }
